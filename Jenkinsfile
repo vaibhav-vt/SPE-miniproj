@@ -10,5 +10,10 @@ pipeline{
                 url:'https://github.com/vaibhav-vt/SPE-miniproj.git'
             }
         }
+        stage('stage 2: maven install'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
     }
 }
