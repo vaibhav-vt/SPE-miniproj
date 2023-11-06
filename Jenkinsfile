@@ -15,5 +15,12 @@ pipeline{
                 sh 'mvn clean install'
             }
         }
+        stage('stage 3: build docker image'){
+            steps{
+                script{
+                    docker_image = docker.build "vaibhavvt/miniproj:latest"
+                }
+            }
+        }
     }
 }
