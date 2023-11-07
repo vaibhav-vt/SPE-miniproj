@@ -1,1 +1,7 @@
-Hewwo read me UwU bleh
+The program is built using the scripts in the Jenkenfile document.
+
+After build run the docker using command
+
+sudo docker start -a -i Calculator
+
+From the menu, type the number corresponding to the operation and enter the two numbers. The program will output the result.
