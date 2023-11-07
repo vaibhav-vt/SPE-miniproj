@@ -1,0 +1,4 @@
+2023-11-07 15:11:32.019 [main] INFO  org.example.Main - Start of execution
+2023-37-07 16:37:53.096 [main] INFO  org.example.Main - Executing division
+2023-38-07 16:38:10.552 [main] ERROR org.example.Main - Division by 0 not possible
+2023-38-07 16:38:53.560 [main] ERROR org.example.Main - Division by 0 not possible
