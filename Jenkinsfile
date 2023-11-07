@@ -26,7 +26,7 @@ pipeline{
             steps{
                 script{
                     docker.withRegistry('', 'DockerHubCred'){
-                        docker_image.push
+                        docker_image.push()
                     }
                 }
             }
