@@ -39,5 +39,17 @@ pipeline{
                 }
             }
         }
+        stage('stage 6: ansible deployment'){
+            steps{
+                ansiblePlaybook becomeUser: null,
+                colorized: true,
+                credentialsId: 'localhost',
+                disableHostKeyChecking: true,
+                installation: 'Ansible',
+                inventory: 'Deployment/inventory',
+                playbook: 'Deployment/deploy.yml',
+                sudoUser: null
+            }
+        }
     }
 }
