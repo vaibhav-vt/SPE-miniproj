@@ -1,1 +1,2 @@
-localhost ansible_user = vaibhav-vt
+[host_machine]
+localhost ansible_connection = jenkins
