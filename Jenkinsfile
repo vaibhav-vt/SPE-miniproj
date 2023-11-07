@@ -22,5 +22,22 @@ pipeline{
                 }
             }
         }
+        stage('stage 4: push docker image to dockerhub'){
+            steps{
+                script{
+                    docker.withRegistry('', 'DockerHubCred'){
+                        docker_image.push
+                    }
+                }
+            }
+        }
+        stage('stage 5: clean docker docker images'){
+            steps{
+                script{
+                    sh 'docker container prune -f'
+                    sh 'docker image prune -f'
+                }
+            }
+        }
     }
 }
