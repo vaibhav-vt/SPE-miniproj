@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 public class CalculatorTest {
     private Main calculator;
+    private static final double DELTA = 1e-15;
 
     @Before
     public void setUp() {calculator = new Main();}
@@ -13,7 +14,7 @@ public class CalculatorTest {
         int a = 2;
         int b = 3;
         int exp = 5;
-        Assert.assertEquals(exp, calculator.add(a, b));
+        Assert.assertEquals(exp, calculator.add(a, b), DELTA);
     }
 
     @Test
@@ -21,7 +22,7 @@ public class CalculatorTest {
         int a = 2;
         int b = 3;
         int exp = 7;
-        Assert.assertNotEquals(exp, calculator.add(a, b));
+        Assert.assertNotEquals(exp, calculator.add(a, b), DELTA);
     }
 
     @Test
@@ -29,7 +30,7 @@ public class CalculatorTest {
         int a = 6;
         int b = 4;
         int exp = 2;
-        Assert.assertEquals(exp, calculator.sub(a, b));
+        Assert.assertEquals(exp, calculator.sub(a, b), DELTA);
     }
 
     @Test
@@ -37,7 +38,7 @@ public class CalculatorTest {
         int a = 5;
         int b = 1;
         int exp = 5;
-        Assert.assertNotEquals(exp, calculator.sub(a, b));
+        Assert.assertNotEquals(exp, calculator.sub(a, b), DELTA);
     }
 
     @Test
@@ -45,7 +46,7 @@ public class CalculatorTest {
         int a = 2;
         int b = 3;
         int exp = 6;
-        Assert.assertEquals(exp, calculator.mul(a, b));
+        Assert.assertEquals(exp, calculator.mul(a, b), DELTA);
     }
 
     @Test
@@ -53,7 +54,7 @@ public class CalculatorTest {
         int a = 2;
         int b = 3;
         int exp = 7;
-        Assert.assertNotEquals(exp, calculator.mul(a, b));
+        Assert.assertNotEquals(exp, calculator.mul(a, b), DELTA);
     }
 
     @Test
@@ -61,7 +62,7 @@ public class CalculatorTest {
         int a = 6;
         int b = 3;
         int exp = 2;
-        Assert.assertEquals(exp, calculator.div(a, b));
+        Assert.assertEquals(exp, calculator.div(a, b), DELTA);
     }
 
     @Test
@@ -69,7 +70,7 @@ public class CalculatorTest {
         int a = 6;
         int b = 3;
         int exp = 5;
-        Assert.assertNotEquals(exp, calculator.div(a, b));
+        Assert.assertNotEquals(exp, calculator.div(a, b), DELTA);
     }
 
 
